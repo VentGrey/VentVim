@@ -23,6 +23,8 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " rust
 " Vim racer
 Plug 'racer-rust/vim-racer'
+let g:racer_cmd = "/home/omar/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
 
 " Rust.vim
 Plug 'rust-lang/rust.vim'
@@ -135,7 +137,7 @@ let g:gruvbox_improved_strings = 1
 let g:indentLine_enabled = 1
 let g:indentLine_char = '·'
 let g:indentLine_showFirstIndentLevel = 1
-
+let g:indentLine_first_char = '·'
 "" Status bar
 set laststatus=2
 
@@ -367,6 +369,9 @@ autocmd FileType cpp setlocal tabstop=2 shiftwidth=2 expandtab
 " for html files, 2 spaces
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
+" Rust
+autocmd FileType rust setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType rs setlocal tabstop=4 shiftwidth=4 expandtab
 
 " javascript
 let g:javascript_enable_domhtmlcss = 1
@@ -418,15 +423,6 @@ let python_highlight_all = 1
 
 " go
 " vim-go
-" run :GoBuild or :GoTestCompile based on the go file
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#test#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
 
 let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
