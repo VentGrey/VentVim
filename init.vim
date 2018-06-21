@@ -1,6 +1,6 @@
 set nocompatible	"Be Improved
 
-call plug#begin(expand('~/.vim/plugged'))
+call plug#begin(expand('~/.config/nvim/plugged'))
 "" Paquetes qleros de plug
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -18,8 +18,12 @@ Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Shougo/vimproc.vim', {'do': 'make'}
 
+"Deoplete
+Plug 'Shougo/deoplete.nvim', {'do': 'UpdateRemotePlugins'}
+Plug 'zchee/deoplete-clang'
+Plug 'sebastianmarkow/deoplete-rust'
 " rust
 " Vim racer
 Plug 'racer-rust/vim-racer'
@@ -58,6 +62,10 @@ Plug 'altercation/vim-colors-solarized'
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 Plug 'ludwig/split-manpage.vim'
+
+" go
+" " Bundle de golang
+Plug 'fatih/vim-go', {'do': 'GoInstallBinaries'}
 
 
 " html
@@ -111,6 +119,9 @@ set smartcase
 set nobackup
 set noswapfile
 
+"" Folding options
+set foldmethod=indent
+set nofoldenable
 "***************************************************
 "Opciones visuales
 "***************************************************
@@ -121,8 +132,6 @@ set mouse=a
 set mousemodel=popup
 set t_Co=256
 set gfn=Monospace\ 10
-set guioptions -=m
-set guioptions -=T
 let g:CSApprox_loaded = 1
 
 " Theme options
@@ -369,9 +378,6 @@ autocmd FileType cpp setlocal tabstop=2 shiftwidth=2 expandtab
 " for html files, 2 spaces
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
-" Rust
-autocmd FileType rust setlocal tabstop=4 shiftwidth=4 expandtab
-autocmd FileType rs setlocal tabstop=4 shiftwidth=4 expandtab
 
 " javascript
 let g:javascript_enable_domhtmlcss = 1
@@ -393,6 +399,7 @@ augroup vimrc-python
 augroup END
 
 " rust
+autocmd FileType rs setlocal tabstop=4 shiftwidth=4 expandtab
 " Vim racer
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
@@ -420,62 +427,6 @@ let g:airline#extensions#virtualenv#enabled = 1
 " Default highlight is better than polyglot
 let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
-
-" go
-" vim-go
-
-let g:go_list_type = "quickfix"
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
-let g:syntastic_go_checkers = ['golint', 'govet']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_space_tab_error = 0
-let g:go_highlight_array_whitespace_error = 0
-let g:go_highlight_trailing_whitespace_error = 0
-let g:go_highlight_extra_types = 1
-
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
-
-augroup completion_preview_close
-  autocmd!
-  if v:version > 703 || v:version == 703 && has('patch598')
-    autocmd CompleteDone * if !&previewwindow && &completeopt =~ 'preview' | silent! pclose | endif
-  endif
-augroup END
-
-augroup go
-
-  au!
-  au Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
-  au Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
-  au Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
-  au Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
-
-  au FileType go nmap <Leader>dd <Plug>(go-def-vertical)
-  au FileType go nmap <Leader>dv <Plug>(go-doc-vertical)
-  au FileType go nmap <Leader>db <Plug>(go-doc-browser)
-
-  au FileType go nmap <leader>r  <Plug>(go-run)
-  au FileType go nmap <leader>t  <Plug>(go-test)
-  au FileType go nmap <Leader>gt <Plug>(go-coverage-toggle)
-  au FileType go nmap <Leader>i <Plug>(go-info)
-  au FileType go nmap <silent> <Leader>l <Plug>(go-metalinter)
-  au FileType go nmap <C-g> :GoDecls<cr>
-  au FileType go nmap <leader>dr :GoDeclsDir<cr>
-  au FileType go imap <C-g> <esc>:<C-u>GoDecls<cr>
-  au FileType go imap <leader>dr <esc>:<C-u>GoDeclsDir<cr>
-  au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
-
-augroup END
 
 
 "*****************************************************************************
@@ -517,3 +468,17 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+
+"Syntastic Options
+let g:syntastic_rust_checkers = ['cargo']
+let g:Syntastic_java_javac_executable = '~/.config/nvim/plugged/syntastic/syntax_checkers/java'
+
+"Deoplete options
+let g:deoplete#enable_at_startup = 1
+"Deoplete clang
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/x86_64-linux-gnu/'
+"Deoplete Rust
+let g:deoplete#sources#rust#racer_binary='/home/omar/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/home/omar/.rust/rust/src'
+let g:deoplete#sources#rust#show_duplicates=1
