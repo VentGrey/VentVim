@@ -1,7 +1,7 @@
 set nocompatible	"Be Improved
 
 call plug#begin(expand('~/.config/nvim/plugged'))
-"" Paquetes qleros de plug
+"" Paquetes todos pendejos de plug
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
@@ -14,24 +14,38 @@ Plug 'vim-scripts/CSApprox'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 
+
+" Interfaces denite
+Plug 'Shougo/denite.nvim'
+
+"Denite extras
+Plug 'neoclide/denite-git'
+
+" Linternas perronas
+Plug 'w0rp/ale'
+let g:ale_linters = {'rust': ['/home/omar/.cargo/bin/rls']}
+let g:ale_rust_executable = '/home/omar/.cargo/bin/'
+let g:ale_rust_rls_toolchain = 'stable'
+
+
+" Paréntesis bonitos
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1
+
+" Vim Markdown
+Plug 'JamshedVesuna/vim-markdown-preview'
 "Deoplete
 Plug 'Shougo/deoplete.nvim', {'do': 'UpdateRemotePlugins'}
 Plug 'zchee/deoplete-clang'
 Plug 'sebastianmarkow/deoplete-rust'
-" rust
-" Vim racer
-Plug 'racer-rust/vim-racer'
-let g:racer_cmd = "/home/omar/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
 
-" Rust.vim
-Plug 'rust-lang/rust.vim'
+"Javacomplete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 
 if isdirectory('/usr/local/opt/fzf')
@@ -53,12 +67,15 @@ endif
 
 Plug 'honza/vim-snippets'
 
-""Colores alv
+""Colores para que se vea bien chingón vim
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
-Plug 'altercation/vim-colors-solarized'
+Plug 'icymind/NeoSolarized'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'fmoralesc/molokayo'
 
-""Lenguajes Qleros alv
+""Lenguajes culeros
+
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 Plug 'ludwig/split-manpage.vim'
@@ -80,14 +97,12 @@ Plug 'mattn/emmet-vim'
 "" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
 
-
-" python
-"" Python Bundle
-Plug 'davidhalter/jedi-vim'
-Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+" Rust
+" Rust.vim
+Plug 'rust-lang/rust.vim'
 
 
-"" Include user's extra bundle
+"" Por si me hago puto y creo mis plugs
 if filereadable(expand("~/.vimrc.local.bundles"))
   source ~/.vimrc.local.bundles
 endif
@@ -100,10 +115,9 @@ set encoding=UTF-8
 set ttyfast
 set backspace=indent,eol,start
 
-" Tabulaciones
-set tabstop=2
-set softtabstop=0
-set shiftwidth=2
+" Tabulaciones bonitas
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 "" Map leader to
@@ -119,11 +133,11 @@ set smartcase
 set nobackup
 set noswapfile
 
-"" Folding options
+"" cosas pa doblar el código y no ver todo
 set foldmethod=indent
 set nofoldenable
 "***************************************************
-"Opciones visuales
+"Opciones visuales para que vim no se vea culero
 "***************************************************
 syntax on
 set number
@@ -131,26 +145,24 @@ set numberwidth=1
 set mouse=a
 set mousemodel=popup
 set t_Co=256
-set gfn=Monospace\ 10
 let g:CSApprox_loaded = 1
+set colorcolumn=88
 
-" Theme options
+" El tema que wausar c:
 set background=dark
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_improved_warnings = 1
-let g:gruvbox_improved_strings = 1
-
-
-" IndentLine
+colorscheme NeoSolarized
+hi Comment cterm=italic
+let g:space_vim_dark_background = 233
+let g:rehash256 = 1
+" indicadores de indent por si tengo que programar en la caca de python
 let g:indentLine_enabled = 1
 let g:indentLine_char = '·'
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_first_char = '·'
-"" Status bar
+"" barrita de abajo toda chingona
 set laststatus=2
 
-"" Use modeline overrides
+"" Noc que hace esto
 set modeline
 set modelines=10
 
@@ -160,8 +172,7 @@ set titlestring=%F
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
-" Search mappings: These will make it so that going to the next one in a
-" search will center on the line it's found in.
+"" Mapeado de búsqueda (no preguntar que hace)
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
@@ -170,17 +181,16 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'gruvbox'
-let g:airline#extensions#syntastic#enabled = 1
+let g:airline_theme = 'solarized'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
 
 "*****************************************************************************
-"" Abbreviations
+"" Abreviaciones chidas para no cagarla con los comandos
 "*****************************************************************************
-"" no one is really happy until you have this shortcuts
+"" neta, te hacen un parote con el bloq mayus puesto
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
 cnoreabbrev Qall! qall!
@@ -192,7 +202,7 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 
-"" NERDTree configuration
+"" Config del arbolito que sale con <F3>
 let g:NERDTreeChDirMode=2
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
 let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
@@ -216,7 +226,7 @@ let g:vimshell_prompt =  '$ '
 
 
 "*****************************************************************************
-"" Functions
+"" Funciones chingonas para que se formatien bien chido los archivos
 "*****************************************************************************
 if !exists('*s:setupWrapping')
   function s:setupWrapping()
@@ -242,7 +252,7 @@ augroup END
 
 
 "*****************************************************************************
-"" Mappings
+"" Mappeado de teclas because yes
 "*****************************************************************************
 
 "" Split
@@ -259,24 +269,24 @@ noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 
-" session management
+" Mapeado de sesiones
 nnoremap <leader>so :OpenSession<Space>
 nnoremap <leader>ss :SaveSession<Space>
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
-"" Tabs
+"" tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
-"" Set working directory
+"" directorio de trabajo
 nnoremap <leader>. :lcd %:p:h<CR>
 
-"" Opens an edit command with the path of the currently edited file filled in
+"" Abrir donde se quedó alv
 noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
-"" Opens a tab edit command with the path of the currently edited file filled
+"" no me acuerdo que hace esto
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 "" fzf.vim
@@ -284,10 +294,49 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 
-" The Silver Searcher
-if executable('ag')
-  let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
-  set grepprg=ag\ --nogroup\ --nocolor
+" The Silver Searcher o surfer?
+if executable('hw')
+    " Use hw
+    let g:unite_source_grep_command = 'hw'
+    let g:unite_source_grep_default_opts = '--no-group --no-color'
+    let g:unite_source_grep_recursive_opt = ''
+elseif executable('ag')
+    let g:unite_source_grep_command = 'ag'
+    let g:unite_source_grep_default_opts =
+                \ '-i --line-numbers --nocolor ' .
+                \ '--nogroup --hidden --ignore ' .
+                \ '''.hg'' --ignore ''.svn'' --ignore' .
+                \ ' ''.git'' --ignore ''.bzr'''
+    let g:unite_source_grep_recursive_opt = ''
+elseif executable('pt')
+    " Use pt (the platinum searcher)
+    " https://github.com/monochromegane/the_platinum_searcher
+    let g:unite_source_grep_command = 'pt'
+    let g:unite_source_grep_default_opts = '--nogroup --nocolor'
+    let g:unite_source_grep_recursive_opt = ''
+elseif executable('ack-grep')
+    " Use ack
+    " http://beyondgrep.com/
+    let g:unite_source_grep_command = 'ack-grep'
+    let g:unite_source_grep_default_opts =
+                \ '-i --no-heading --no-color -k -H'
+    let g:unite_source_grep_recursive_opt = ''
+elseif executable('ack')
+    let g:unite_source_grep_command = 'ack'
+    let g:unite_source_grep_default_opts = '-i --no-heading' .
+                \ ' --no-color -k -H'
+    let g:unite_source_grep_recursive_opt = ''
+elseif executable('jvgrep')
+    " Use jvgrep
+    " https://github.com/mattn/jvgrep
+    let g:unite_source_grep_command = 'jvgrep'
+    let g:unite_source_grep_default_opts =
+                \ '-i --exclude ''\.(git|svn|hg|bzr)'''
+    let g:unite_source_grep_recursive_opt = '-R'
+elseif executable('beagrep')
+    " Use beagrep
+    " https://github.com/baohaojun/beagrep
+    let g:unite_source_grep_command = 'beagrep'
 endif
 
 " ripgrep
@@ -306,27 +355,21 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="/.config/nvim/ultisnips/UltiSnips"
 
-" syntastic
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
-let g:syntastic_auto_loc_list=1
-let g:syntastic_aggregate_errors = 1
+
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 
-" Disable visualbell
+" Quitar la visualbell para discapacitados mentales
 set noerrorbells visualbell t_vb=
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
 
-"" Copy/Paste/Cut
+"" Copy/Paste/Cut porque todos quieren clipboard aquí
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
@@ -336,42 +379,42 @@ noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
 
 
-"" Buffer nav
+"" navegar en el buffer
 noremap <leader>z :bp<CR>
 noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
-"" Close buffer
+"" cerrar buffer alv
 noremap <leader>c :bd<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 
-"" Switching windows
+"" Cambiar de ventanas
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
-"" Vmap for maintain Visual Mode after shifting > and <
+"" Cositas para las flechitas
 vmap < <gv
 vmap > >gv
 
-"" Move visual block
+"" Unos bloquesotes bien sexys
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-"" Open current line on GitHub
+"" Abrir en Git(hub)
 nnoremap <Leader>o :.Gbrowse<CR>
 
 "*****************************************************************************
-"" Custom configs
+"" Configuraciones especiales para lenguajes culeros
 "*****************************************************************************
 
 " c
-autocmd FileType c setlocal tabstop=2 shiftwidth=2 expandtab
-autocmd FileType cpp setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
 
 
 " html
@@ -388,49 +431,20 @@ augroup vimrc-javascript
   autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
 augroup END
 
-
-" python
-" vim-python
-augroup vimrc-python
-  autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=2 tabstop=2 colorcolumn=79
-      \ formatoptions+=croq softtabstop=2
-      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-augroup END
-
 " rust
-autocmd FileType rs setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType rs setlocal tabstop=4 expandtab shiftwidth=4 smarttab
 " Vim racer
-au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
-" jedi-vim
-let g:jedi#popup_on_dot = 0
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#smart_auto_mappings = 0
-
-" syntastic
-let g:syntastic_python_checkers=['python', 'flake8']
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
 
-" Syntax highlight
-" Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
-let python_highlight_all = 1
-
 
 "*****************************************************************************
-"" Convenience variables
+"" Variables para que jale
 "*****************************************************************************
 
 " vim-airline
@@ -469,16 +483,23 @@ else
   let g:airline_symbols.linenr = ''
 endif
 
-"Syntastic Options
-let g:syntastic_rust_checkers = ['cargo']
-let g:Syntastic_java_javac_executable = '~/.config/nvim/plugged/syntastic/syntax_checkers/java'
+"Rust-vim Options
+let g:rustc_path = '$HOME/.cargo/bin/rustc'
+let g:rust_recommended_style = 1
+let g:rust_fold = 2
+
+"Vim Ale
+    "Habilitar la compresión donde se pueda usar
+let g:ale_completion_enabled = 1
+let g:ale_sign_error = "✗"
+let g:ale_sign_warning = "⚠"
 
 "Deoplete options
 let g:deoplete#enable_at_startup = 1
 "Deoplete clang
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang.so'
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang-6.0.so.1'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/x86_64-linux-gnu/'
 "Deoplete Rust
 let g:deoplete#sources#rust#racer_binary='/home/omar/.cargo/bin/racer'
 let g:deoplete#sources#rust#rust_source_path='/home/omar/.rust/rust/src'
-let g:deoplete#sources#rust#show_duplicates=1
+let g:deoplete#sources#rust#documentation_max_height=20
