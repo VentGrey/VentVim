@@ -19,26 +19,94 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 
-
 " Interfaces denite
 Plug 'Shougo/denite.nvim'
 
 "Denite extras
 Plug 'neoclide/denite-git'
 
-" Linternas perronas
+" Linters
 Plug 'w0rp/ale'
-let g:ale_linters = {'rust': ['/home/omar/.cargo/bin/rls']}
-let g:ale_rust_executable = '/home/omar/.cargo/bin/'
-let g:ale_rust_rls_toolchain = 'stable'
 
+
+"Vim A.L.E
+    "Enable A.L.E
+let g:ale_completion_enabled = 1
+let g:ale_sign_error = "✗"
+let g:ale_sign_warning = "⚠"
+
+"Deoplete options
+let g:deoplete#enable_at_startup = 1
+"Deoplete clang
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang-6.0.so.1'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/x86_64-linux-gnu/'
+
+" ------RUST-----
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+
+" Rust
+" Rust.vim
+Plug 'rust-lang/rust.vim'
+
+" rust
+autocmd BufReadPost *.rs setlocal filetype=rust
+
+autocmd FileType *.rs setlocal tabstop=4 expandtab shiftwidth=4 smarttab
+" Vim racer
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
+
+Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+
+
+"Rust-vim Options
+let g:rustc_path = '/home/omar/.cargo/bin/rustc'
+let g:rust_recommended_style = 1
+let g:rust_fold = 2
+
+"A.L.E Rust Settings
+"Various settings for Rust
+let g:ale_linters = {'rust': ['rls']}
+let g:ale_rust_rls_executable = '/home/omar/.cargo/bin/rls'
+let g:ale_rust_rls_toolchain = 'nightly'
+
+
+"Deoplete Rust
+let g:deoplete#sources#rust#racer_binary='/home/omar/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/home/omar/.rust/rust/src'
+let g:deoplete#sources#rust#documentation_max_height=20
+
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+    \ }
+
+" -----END OF RUST----------
 
 " Paréntesis bonitos
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
-" Vim Markdown
-Plug 'JamshedVesuna/vim-markdown-preview'
+" Vim Markdown Composer
+function! BuildComposer(info)
+    if a:info.status != 'unchanged' || a:info.force
+        if has('nvim')
+            !cargo build --release
+        else
+            !cargo build --release --no-default-features --features json-rpc
+        endif
+    endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+
 "Deoplete
 Plug 'Shougo/deoplete.nvim', {'do': 'UpdateRemotePlugins'}
 Plug 'zchee/deoplete-clang'
@@ -97,9 +165,7 @@ Plug 'mattn/emmet-vim'
 "" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
 
-" Rust
-" Rust.vim
-Plug 'rust-lang/rust.vim'
+
 
 
 "" Por si me hago puto y creo mis plugs
@@ -150,7 +216,7 @@ set colorcolumn=88
 
 " El tema que wausar c:
 set background=dark
-colorscheme NeoSolarized
+colorscheme molokai
 hi Comment cterm=italic
 let g:space_vim_dark_background = 233
 let g:rehash256 = 1
@@ -181,7 +247,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'base16_monokai'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
@@ -431,13 +497,6 @@ augroup vimrc-javascript
   autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
 augroup END
 
-" rust
-autocmd FileType rs setlocal tabstop=4 expandtab shiftwidth=4 smarttab
-" Vim racer
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap gx <Plug>(rust-def-vertical)
-au FileType rust nmap <leader>gd <Plug>(rust-doc)
-
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
@@ -483,23 +542,3 @@ else
   let g:airline_symbols.linenr = ''
 endif
 
-"Rust-vim Options
-let g:rustc_path = '$HOME/.cargo/bin/rustc'
-let g:rust_recommended_style = 1
-let g:rust_fold = 2
-
-"Vim Ale
-    "Habilitar la compresión donde se pueda usar
-let g:ale_completion_enabled = 1
-let g:ale_sign_error = "✗"
-let g:ale_sign_warning = "⚠"
-
-"Deoplete options
-let g:deoplete#enable_at_startup = 1
-"Deoplete clang
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang-6.0.so.1'
-let g:deoplete#sources#clang#clang_header = '/usr/lib/x86_64-linux-gnu/'
-"Deoplete Rust
-let g:deoplete#sources#rust#racer_binary='/home/omar/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/home/omar/.rust/rust/src'
-let g:deoplete#sources#rust#documentation_max_height=20
