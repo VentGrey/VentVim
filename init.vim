@@ -42,27 +42,27 @@ let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang
 let g:deoplete#sources#clang#clang_header = '/usr/lib/x86_64-linux-gnu/'
 
 " ------RUST-----
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
+"Rust binaries path
+let PATH="$HOME/.cargo/bin:$PATH"
 
 " Rust
 " Rust.vim
 Plug 'rust-lang/rust.vim'
 
 " rust
-autocmd BufReadPost *.rs setlocal filetype=rust
 
 autocmd FileType *.rs setlocal tabstop=4 expandtab shiftwidth=4 smarttab
+autocmd BufReadPost *.rs setlocal filetype=rust
 " Vim racer
+Plug 'Racer-rust/vim-racer'
+let g:racer_cmd = "/home/omar/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+
+
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
-
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-
 
 "Rust-vim Options
 let g:rustc_path = '/home/omar/.cargo/bin/rustc'
@@ -71,22 +71,15 @@ let g:rust_fold = 2
 
 "A.L.E Rust Settings
 "Various settings for Rust
-let g:ale_linters = {'rust': ['rls']}
+let g:ale_linters = {
+            \ 'rust': [ 'rls' ],
+            \ }
 let g:ale_rust_rls_executable = '/home/omar/.cargo/bin/rls'
 let g:ale_rust_rls_toolchain = 'nightly'
-
 
 "Deoplete Rust
 let g:deoplete#sources#rust#racer_binary='/home/omar/.cargo/bin/racer'
 let g:deoplete#sources#rust#rust_source_path='/home/omar/.rust/rust/src'
-let g:deoplete#sources#rust#documentation_max_height=20
-
-" Required for operations modifying multiple buffers like rename.
-set hidden
-
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ }
 
 " -----END OF RUST----------
 
@@ -124,9 +117,6 @@ else
 endif
 Plug 'Shougo/vimproc.vim'
 
-if v:version >= 703
-	Plug 'Shougo/vimshell.vim'
-endif
 
 if v:version >= 704
   "" Snippets
@@ -165,20 +155,21 @@ Plug 'mattn/emmet-vim'
 "" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
 
-
-
-
-"" Por si me hago puto y creo mis plugs
-if filereadable(expand("~/.vimrc.local.bundles"))
-  source ~/.vimrc.local.bundles
-endif
-
 call plug#end()
 
 filetype plugin indent on
 
+" Encodings
+
 set encoding=UTF-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set bomb
+set binary
+
 set ttyfast
+
+" Arreglar el indent de backspace
 set backspace=indent,eol,start
 
 " Tabulaciones bonitas
@@ -189,6 +180,9 @@ set expandtab
 "" Map leader to
 let mapleader=','
 
+"Buffers ocultos
+set hidden
+
 ""Motor de búsqueda
 set hlsearch
 set incsearch
@@ -198,6 +192,8 @@ set smartcase
 ""Evitar los cagaderos de vim
 set nobackup
 set noswapfile
+
+set fileformats=unix,dos,mac
 
 "" cosas pa doblar el código y no ver todo
 set foldmethod=indent
@@ -212,7 +208,7 @@ set mouse=a
 set mousemodel=popup
 set t_Co=256
 let g:CSApprox_loaded = 1
-set colorcolumn=88
+set colorcolumn=80
 
 " El tema que wausar c:
 set background=dark
@@ -248,7 +244,10 @@ endif
 
 " vim-airline
 let g:airline_theme = 'base16_monokai'
+
 let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#fugitiveline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
@@ -286,10 +285,6 @@ let Grep_Default_Options = '-IR'
 let Grep_Skip_Files = '*.log *.db'
 let Grep_Skip_Dirs = '.git node_modules'
 
-" vimshell.vim
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_prompt =  '$ '
-
 
 "*****************************************************************************
 "" Funciones chingonas para que se formatien bien chido los archivos
@@ -298,7 +293,7 @@ if !exists('*s:setupWrapping')
   function s:setupWrapping()
     set wrap
     set wm=2
-    set textwidth=79
+    set textwidth=80
   endfunction
 endif
 
@@ -479,8 +474,8 @@ nnoremap <Leader>o :.Gbrowse<CR>
 "*****************************************************************************
 
 " c
-autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
-autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType c setlocal tabstop=8 shiftwidth=8 expandtab
+autocmd FileType cpp setlocal tabstop=8 shiftwidth=8 expandtab
 
 
 " html
