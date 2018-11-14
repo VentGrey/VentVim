@@ -28,6 +28,11 @@ Plug 'neoclide/denite-git'
 " Linters
 Plug 'w0rp/ale'
 
+"Plugins para C/C++
+Plug 'octol/vim-cpp-enhanced-highlight'
+
+"Selector de colores
+Plug 'KabbAmine/vCoolor.vim'
 
 "Vim A.L.E
     "Enable A.L.E
@@ -45,7 +50,7 @@ let g:deoplete#sources#clang#clang_header = '/usr/lib/x86_64-linux-gnu/'
 
 "Rust binaries path
 let PATH="$HOME/.cargo/bin:$PATH"
-
+let RUST_SRC_PATH="~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src:$RUST_SRC_PATH"
 " Rust
 " Rust.vim
 Plug 'rust-lang/rust.vim'
@@ -131,16 +136,13 @@ Plug 'morhetz/gruvbox'
 Plug 'icymind/NeoSolarized'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'fmoralesc/molokayo'
-
+Plug 'vim-scripts/mars.vim'
+Plug 'srcery-colors/srcery-vim'
 ""Lenguajes culeros
 
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 Plug 'ludwig/split-manpage.vim'
-
-" go
-" " Bundle de golang
-Plug 'fatih/vim-go', {'do': 'GoInstallBinaries'}
 
 
 " html
@@ -154,6 +156,9 @@ Plug 'mattn/emmet-vim'
 " javascript
 "" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
+
+" Python
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
@@ -212,7 +217,7 @@ set colorcolumn=80
 
 " El tema que wausar c:
 set background=dark
-colorscheme molokai
+colorscheme srcery
 hi Comment cterm=italic
 let g:space_vim_dark_background = 233
 let g:rehash256 = 1
@@ -243,7 +248,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'base16_monokai'
+let g:airline_theme = 'srcery'
 
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#fugitiveline#enabled = 1
@@ -477,6 +482,8 @@ nnoremap <Leader>o :.Gbrowse<CR>
 autocmd FileType c setlocal tabstop=8 shiftwidth=8 expandtab
 autocmd FileType cpp setlocal tabstop=8 shiftwidth=8 expandtab
 
+" Python culero asqueroso de caca
+autocmd FileType py setlocal tabstop=4 shiftwidth=4 expandtab
 
 " html
 " for html files, 2 spaces
