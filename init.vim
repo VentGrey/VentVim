@@ -217,7 +217,7 @@ set colorcolumn=80
 
 " El tema que wausar c:
 set background=dark
-colorscheme srcery
+colorscheme space-vim-dark
 hi Comment cterm=italic
 let g:space_vim_dark_background = 233
 let g:rehash256 = 1
@@ -248,7 +248,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'srcery'
+let g:airline_theme = 'violet'
 
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#fugitiveline#enabled = 1
