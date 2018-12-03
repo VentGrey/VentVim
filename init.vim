@@ -3,13 +3,11 @@ set nocompatible	"Be Improved
 call plug#begin(expand('~/.config/nvim/plugged'))
 "" Paquetes todos pendejos de plug
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
@@ -18,12 +16,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
-
-" Interfaces denite
-Plug 'Shougo/denite.nvim'
-
-"Denite extras
-Plug 'neoclide/denite-git'
 
 " Linters
 Plug 'w0rp/ale'
@@ -113,13 +105,6 @@ Plug 'sebastianmarkow/deoplete-rust'
 "Javacomplete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
-
-if isdirectory('/usr/local/opt/fzf')
-	plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-	Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
-	Plug 'junegunn/fzf.vim'
-endif
 Plug 'Shougo/vimproc.vim'
 
 
@@ -217,7 +202,7 @@ set colorcolumn=80
 
 " El tema que wausar c:
 set background=dark
-colorscheme space-vim-dark
+colorscheme srcery
 hi Comment cterm=italic
 let g:space_vim_dark_background = 233
 let g:rehash256 = 1
@@ -248,7 +233,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'violet'
+let g:airline_theme = 'ouo'
 
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#fugitiveline#enabled = 1
@@ -354,11 +339,6 @@ noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 "" no me acuerdo que hace esto
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-"" fzf.vim
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
 
 " The Silver Searcher o surfer?
 if executable('hw')
