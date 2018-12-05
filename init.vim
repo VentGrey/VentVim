@@ -3,7 +3,6 @@ set nocompatible	"Be Improved
 call plug#begin(expand('~/.config/nvim/plugged'))
 "" Paquetes todos pendejos de plug
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -102,9 +101,7 @@ Plug 'Shougo/deoplete.nvim', {'do': 'UpdateRemotePlugins'}
 Plug 'zchee/deoplete-clang'
 Plug 'sebastianmarkow/deoplete-rust'
 
-"Javacomplete
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-
+" Vim proc
 Plug 'Shougo/vimproc.vim'
 
 
@@ -120,8 +117,6 @@ Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'icymind/NeoSolarized'
 Plug 'liuchengxu/space-vim-dark'
-Plug 'fmoralesc/molokayo'
-Plug 'vim-scripts/mars.vim'
 Plug 'srcery-colors/srcery-vim'
 ""Lenguajes culeros
 
