@@ -1,0 +1,215 @@
+[2018-12-07 23:06:07.058] [sharedprocess] [info] main {"machineId":"cf91ee20b44644c263363a40e74b55a05a602fd065b26d0c46f698fea6717450"}
+[2018-12-07 23:06:07.178] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:06:07.266] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:06:07.288] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:06:08.091] [sharedprocess] [info] Deleted from disk rust-lang.rust-0.5.1
+[2018-12-07 23:06:08.093] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-07 23:06:08.095] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-07 23:06:47.065] [sharedprocess] [info] Starting to clean up unused language packs.
+[2018-12-07 23:11:07.328] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:16:07.356] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:21:07.381] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:26:07.400] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:31:07.428] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:36:07.452] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:37:22.355] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:37:22.406] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:37:22.420] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:37:22.429] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:37:22.533] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-07 23:37:22.537] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-07 23:37:22.542] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-07 23:41:07.474] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:46:07.487] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:51:07.512] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-07 23:56:07.536] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-08 00:01:07.563] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-08 00:06:07.584] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-08 00:11:07.611] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-08 00:16:07.637] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-08 00:16:49.679] [sharedprocess] [info] Installing extension: vscode-lldb
+[2018-12-08 00:16:49.692] [sharedprocess] [info] Scanned user extensions: 9
+[2018-12-08 00:16:50.497] [sharedprocess] [info] Downloaded extension: vscode-lldb /tmp/d589d3f8-d5f9-4bd6-bfe9-b1e4d1402d5a
+[2018-12-08 00:16:50.569] [sharedprocess] [info] Extracted extension to /home/omar/.vscode-oss/extensions/.vadimcn.vscode-lldb-1.1.2: vadimcn.vscode-lldb-1.1.2
+[2018-12-08 00:16:50.569] [sharedprocess] [info] Renamed to /home/omar/.vscode-oss/extensions/vadimcn.vscode-lldb-1.1.2
+[2018-12-08 00:16:50.569] [sharedprocess] [info] Installation completed. vadimcn.vscode-lldb-1.1.2
+[2018-12-08 00:16:50.618] [sharedprocess] [info] Extensions installed successfully: vadimcn.vscode-lldb
+[2018-12-08 00:16:50.754] [sharedprocess] [info] Scanned user extensions: 10
+[2018-12-08 00:16:50.783] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:16:52.020] [sharedprocess] [info] Scanned user extensions: 10
+[2018-12-08 00:16:52.025] [sharedprocess] [info] Scanned user extensions: 10
+[2018-12-08 00:16:52.032] [sharedprocess] [info] Scanned user extensions: 10
+[2018-12-08 00:16:52.114] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:16:52.118] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:16:52.123] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:17:08.844] [sharedprocess] [info] Installing extension: better-toml
+[2018-12-08 00:17:08.855] [sharedprocess] [info] Scanned user extensions: 10
+[2018-12-08 00:17:09.633] [sharedprocess] [info] Downloaded extension: better-toml /tmp/fdcee880-d0b4-4185-bf3c-6d4eb1a75eea
+[2018-12-08 00:17:09.834] [sharedprocess] [info] Extracted extension to /home/omar/.vscode-oss/extensions/.bungcip.better-toml-0.3.2: bungcip.better-toml-0.3.2
+[2018-12-08 00:17:09.835] [sharedprocess] [info] Renamed to /home/omar/.vscode-oss/extensions/bungcip.better-toml-0.3.2
+[2018-12-08 00:17:09.835] [sharedprocess] [info] Installation completed. bungcip.better-toml-0.3.2
+[2018-12-08 00:17:09.906] [sharedprocess] [info] Extensions installed successfully: bungcip.better-toml
+[2018-12-08 00:17:10.046] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:17:10.066] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:18:15.543] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:15.550] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:15.562] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:15.571] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:15.579] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:15.736] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:18:15.742] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:18:15.749] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:18:15.761] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:18:16.247] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:30.203] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:30.207] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:30.212] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:30.297] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:18:30.303] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:18:30.308] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:18:45.761] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:45.806] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:18:45.883] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:18:45.921] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:23:16.183] [sharedprocess] [info] Installing extension: material-icon-theme
+[2018-12-08 00:23:16.269] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:23:16.615] [sharedprocess] [info] Scanned user extensions: 11
+[2018-12-08 00:23:16.857] [sharedprocess] [info] Downloaded extension: material-icon-theme /tmp/10f9f954-325c-44aa-8f76-159d3a6107d1
+[2018-12-08 00:23:18.075] [sharedprocess] [info] Extracted extension to /home/omar/.vscode-oss/extensions/.pkief.material-icon-theme-3.6.1: pkief.material-icon-theme-3.6.1
+[2018-12-08 00:23:18.075] [sharedprocess] [info] Renamed to /home/omar/.vscode-oss/extensions/pkief.material-icon-theme-3.6.1
+[2018-12-08 00:23:18.075] [sharedprocess] [info] Installation completed. pkief.material-icon-theme-3.6.1
+[2018-12-08 00:23:18.132] [sharedprocess] [info] Extensions installed successfully: pkief.material-icon-theme
+[2018-12-08 00:23:18.266] [sharedprocess] [info] Scanned user extensions: 12
+[2018-12-08 00:23:18.305] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:24:16.185] [sharedprocess] [info] Installing extension: markdown-preview-github-styles
+[2018-12-08 00:24:16.269] [sharedprocess] [info] Scanned user extensions: 12
+[2018-12-08 00:24:17.442] [sharedprocess] [info] Downloaded extension: markdown-preview-github-styles /tmp/89c2e951-043a-405a-a1b7-be498a58e068
+[2018-12-08 00:24:18.294] [sharedprocess] [info] Extracted extension to /home/omar/.vscode-oss/extensions/.bierner.markdown-preview-github-styles-0.1.4: bierner.markdown-preview-github-styles-0.1.4
+[2018-12-08 00:24:18.294] [sharedprocess] [info] Renamed to /home/omar/.vscode-oss/extensions/bierner.markdown-preview-github-styles-0.1.4
+[2018-12-08 00:24:18.294] [sharedprocess] [info] Installation completed. bierner.markdown-preview-github-styles-0.1.4
+[2018-12-08 00:24:18.368] [sharedprocess] [info] Extensions installed successfully: bierner.markdown-preview-github-styles
+[2018-12-08 00:24:18.505] [sharedprocess] [info] Scanned user extensions: 13
+[2018-12-08 00:24:18.548] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:24:41.438] [sharedprocess] [info] Scanned user extensions: 13
+[2018-12-08 00:24:41.439] [sharedprocess] [info] Uninstalling extension: bierner.markdown-preview-github-styles-0.1.4
+[2018-12-08 00:24:41.454] [sharedprocess] [info] Scanned user extensions: 13
+[2018-12-08 00:24:41.513] [sharedprocess] [info] Successfully uninstalled extension: bierner.markdown-preview-github-styles-0.1.4
+[2018-12-08 00:24:41.769] [sharedprocess] [info] Scanned user extensions: 12
+[2018-12-08 00:24:41.773] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:25:38.276] [sharedprocess] [info] Installing extension: markdown-preview-enhanced
+[2018-12-08 00:25:38.313] [sharedprocess] [info] Scanned user extensions: 12
+[2018-12-08 00:25:47.237] [sharedprocess] [info] Downloaded extension: markdown-preview-enhanced /tmp/2ceca244-e672-4fed-9b52-3391c4ff422c
+[2018-12-08 00:25:51.805] [sharedprocess] [info] Installing extension: php-intellisense
+[2018-12-08 00:25:51.965] [sharedprocess] [info] Scanned user extensions: 12
+[2018-12-08 00:25:53.282] [sharedprocess] [info] Downloaded extension: php-intellisense /tmp/74212392-3d1e-4009-8f50-784edbdaa74a
+[2018-12-08 00:25:55.358] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:25:55.358] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:25:55.358] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:25:55.381] [sharedprocess] [info] Scanned user extensions: 12
+[2018-12-08 00:25:55.425] [sharedprocess] [info] Scanned user extensions: 12
+[2018-12-08 00:25:55.470] [sharedprocess] [info] Scanned user extensions: 12
+[2018-12-08 00:25:55.587] [sharedprocess] [info] Extracted extension to /home/omar/.vscode-oss/extensions/.felixfbecker.php-intellisense-2.3.10: felixfbecker.php-intellisense-2.3.10
+[2018-12-08 00:25:55.588] [sharedprocess] [info] Renamed to /home/omar/.vscode-oss/extensions/felixfbecker.php-intellisense-2.3.10
+[2018-12-08 00:25:55.588] [sharedprocess] [info] Installation completed. felixfbecker.php-intellisense-2.3.10
+[2018-12-08 00:25:55.672] [sharedprocess] [info] Extensions installed successfully: felixfbecker.php-intellisense
+[2018-12-08 00:25:56.093] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:25:56.112] [sharedprocess] [info] Scanned user extensions: 13
+[2018-12-08 00:25:58.264] [sharedprocess] [info] Extracted extension to /home/omar/.vscode-oss/extensions/.shd101wyy.markdown-preview-enhanced-0.3.11: shd101wyy.markdown-preview-enhanced-0.3.11
+[2018-12-08 00:25:58.264] [sharedprocess] [info] Renamed to /home/omar/.vscode-oss/extensions/shd101wyy.markdown-preview-enhanced-0.3.11
+[2018-12-08 00:25:58.264] [sharedprocess] [info] Installation completed. shd101wyy.markdown-preview-enhanced-0.3.11
+[2018-12-08 00:25:58.394] [sharedprocess] [info] Extensions installed successfully: shd101wyy.markdown-preview-enhanced
+[2018-12-08 00:25:58.546] [sharedprocess] [info] Scanned user extensions: 14
+[2018-12-08 00:25:58.562] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:27:06.593] [sharedprocess] [info] Scanned user extensions: 14
+[2018-12-08 00:27:06.639] [sharedprocess] [info] Scanned user extensions: 14
+[2018-12-08 00:27:06.655] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:27:06.660] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:27:06.664] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:27:06.683] [sharedprocess] [info] Scanned user extensions: 14
+[2018-12-08 00:28:01.824] [sharedprocess] [info] Installing extension: theme-dracula
+[2018-12-08 00:28:01.861] [sharedprocess] [info] Scanned user extensions: 14
+[2018-12-08 00:28:02.734] [sharedprocess] [info] Downloaded extension: theme-dracula /tmp/45de0e68-a66f-4be6-a618-f36997e58f37
+[2018-12-08 00:28:02.901] [sharedprocess] [info] Extracted extension to /home/omar/.vscode-oss/extensions/.dracula-theme.theme-dracula-2.15.0: dracula-theme.theme-dracula-2.15.0
+[2018-12-08 00:28:02.901] [sharedprocess] [info] Renamed to /home/omar/.vscode-oss/extensions/dracula-theme.theme-dracula-2.15.0
+[2018-12-08 00:28:02.901] [sharedprocess] [info] Installation completed. dracula-theme.theme-dracula-2.15.0
+[2018-12-08 00:28:02.949] [sharedprocess] [info] Extensions installed successfully: dracula-theme.theme-dracula
+[2018-12-08 00:28:03.116] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:28:03.116] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:28:16.686] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:29:42.954] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:29:43.008] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:29:43.008] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:29:43.014] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:29:43.019] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:29:43.043] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:29:56.174] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:29:56.218] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:29:56.242] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:29:56.248] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:29:56.253] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:29:56.255] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:29:59.872] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:29:59.911] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:29:59.922] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:29:59.926] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:29:59.932] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:29:59.941] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:33:16.752] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:37:27.976] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:37:27.977] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:37:28.010] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:37:28.089] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:37:28.155] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:37:28.194] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:37:28.200] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:37:28.208] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:37:28.215] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:37:28.610] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:42:28.983] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:47:29.049] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:52:29.109] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:53:38.818] [sharedprocess] [info] Installing extension: poptheme
+[2018-12-08 00:53:38.858] [sharedprocess] [info] Scanned user extensions: 15
+[2018-12-08 00:53:40.536] [sharedprocess] [info] Downloaded extension: poptheme /tmp/60963dc4-5fc2-4aaf-8c75-e6027e55e0b0
+[2018-12-08 00:53:40.615] [sharedprocess] [info] Extracted extension to /home/omar/.vscode-oss/extensions/.artisanbytecrafter.poptheme-0.0.9: artisanbytecrafter.poptheme-0.0.9
+[2018-12-08 00:53:40.615] [sharedprocess] [info] Renamed to /home/omar/.vscode-oss/extensions/artisanbytecrafter.poptheme-0.0.9
+[2018-12-08 00:53:40.615] [sharedprocess] [info] Installation completed. artisanbytecrafter.poptheme-0.0.9
+[2018-12-08 00:53:40.656] [sharedprocess] [info] Extensions installed successfully: artisanbytecrafter.poptheme
+[2018-12-08 00:53:40.813] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 00:53:40.823] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:53:43.664] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 00:53:43.769] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 00:53:43.832] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 00:53:43.843] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:53:43.851] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:53:43.856] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:53:43.858] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 00:53:43.886] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 00:53:43.919] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 00:53:45.129] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 00:54:59.878] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 00:58:45.182] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:03:45.258] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:08:45.321] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:13:45.380] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:15:05.896] [sharedprocess] [info] main {"machineId":"cf91ee20b44644c263363a40e74b55a05a602fd065b26d0c46f698fea6717450"}
+[2018-12-08 01:15:06.096] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:15:06.310] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:15:06.517] [sharedprocess] [info] Deleted from disk bierner.markdown-preview-github-styles-0.1.4
+[2018-12-08 01:15:06.518] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 01:15:06.538] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 01:15:06.589] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:15:06.624] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:15:43.931] [sharedprocess] [info] main {"machineId":"cf91ee20b44644c263363a40e74b55a05a602fd065b26d0c46f698fea6717450"}
+[2018-12-08 01:15:44.147] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:15:44.215] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:15:44.232] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:15:44.244] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:15:44.360] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 01:15:44.372] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 01:16:23.941] [sharedprocess] [info] Starting to clean up unused language packs.
+[2018-12-08 01:20:44.564] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:25:44.607] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:30:44.642] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:35:44.684] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 01:40:44.718] [sharedprocess] [info] Scanned user extensions: 16

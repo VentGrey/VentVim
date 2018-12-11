@@ -1,0 +1,45 @@
+[2018-12-08 13:07:23.258] [sharedprocess] [info] main {"machineId":"cf91ee20b44644c263363a40e74b55a05a602fd065b26d0c46f698fea6717450"}
+[2018-12-08 13:07:23.331] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:07:23.361] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:07:23.368] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:07:23.378] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:07:23.432] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 13:07:23.434] [sharedprocess] [info] Scanned system extensions: 71
+[2018-12-08 13:07:25.197] [sharedprocess] [info] Installing extension: rust
+[2018-12-08 13:07:25.220] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:07:26.207] [sharedprocess] [info] Downloaded extension: rust /tmp/5597b9f0-4504-48f2-90dd-4f27ebb7df8c
+[2018-12-08 13:07:26.380] [sharedprocess] [info] Extracted extension to /home/omar/.vscode-oss/extensions/.rust-lang.rust-0.5.3: rust-lang.rust-0.5.3
+[2018-12-08 13:07:26.380] [sharedprocess] [info] Renamed to /home/omar/.vscode-oss/extensions/rust-lang.rust-0.5.3
+[2018-12-08 13:07:26.380] [sharedprocess] [info] Installation completed. rust-lang.rust-0.5.3
+[2018-12-08 13:07:26.512] [sharedprocess] [info] Extensions installed successfully: rust-lang.rust
+[2018-12-08 13:08:03.263] [sharedprocess] [info] Starting to clean up unused language packs.
+[2018-12-08 13:12:23.424] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:17:23.457] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:22:23.497] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:27:23.535] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:32:23.572] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:37:23.605] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:42:23.644] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:47:23.682] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 13:52:23.715] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 14:10:26.245] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 14:15:26.281] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 14:20:26.320] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 14:25:26.353] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 14:30:26.388] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 14:35:26.425] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 14:40:26.458] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 14:45:26.494] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 14:50:26.533] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 14:55:26.569] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 15:00:26.604] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 15:05:26.641] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 15:10:26.679] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 15:15:26.713] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 15:20:26.743] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 15:25:26.778] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 15:30:26.815] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 15:35:26.847] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 15:40:26.883] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 17:08:04.742] [sharedprocess] [info] Scanned user extensions: 16
+[2018-12-08 17:13:04.775] [sharedprocess] [info] Scanned user extensions: 16

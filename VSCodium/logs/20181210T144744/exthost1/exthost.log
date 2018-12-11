@@ -1,0 +1,66 @@
+[2018-12-10 14:47:47.898] [exthost] [info] extension host started
+[2018-12-10 14:47:47.980] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2018-12-10 14:47:47.980] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/debug-auto-launch/dist/extension
+[2018-12-10 14:47:47.993] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-12-10 14:47:47.993] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/emmet/dist/extension
+[2018-12-10 14:47:48.026] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-12-10 14:47:48.026] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/git/dist/main
+[2018-12-10 14:47:48.174] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-12-10 14:47:48.174] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/merge-conflict/dist/extension
+[2018-12-10 14:47:48.181] [exthost] [info] ExtensionService#_doActivateExtension icrawl.discord-vscode {"startup":true,"activationEvent":"*"}
+[2018-12-10 14:47:48.181] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/icrawl.discord-vscode-3.2.1/dist/extension
+[2018-12-10 14:47:48.237] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"activationEvent":"*"}
+[2018-12-10 14:47:48.237] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/pkief.material-icon-theme-3.6.1/out/src/extension
+[2018-12-10 14:47:48.275] [exthost] [info] ExtensionService#_doActivateExtension robertohuertasm.vscode-icons {"startup":true,"activationEvent":"*"}
+[2018-12-10 14:47:48.275] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/robertohuertasm.vscode-icons-7.28.0/out/src/
+[2018-12-10 14:47:48.343] [exthost] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"activationEvent":"*"}
+[2018-12-10 14:47:48.343] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/vscodevim.vim-0.16.13/out/extension
+[2018-12-10 14:47:48.784] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cpptools {"startup":false,"activationEvent":"onLanguage:c"}
+[2018-12-10 14:47:48.784] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/ms-vscode.cpptools-0.20.1/out/src/main
+[2018-12-10 14:47:49.347] [exthost] [info] eager extensions activated
+[2018-12-10 15:00:24.979] [exthost] [info] extension host started
+[2018-12-10 15:00:25.024] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:00:25.024] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/debug-auto-launch/dist/extension
+[2018-12-10 15:00:25.030] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:00:25.030] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/emmet/dist/extension
+[2018-12-10 15:00:25.048] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:00:25.048] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/git/dist/main
+[2018-12-10 15:00:25.155] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:00:25.155] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/merge-conflict/dist/extension
+[2018-12-10 15:00:25.162] [exthost] [info] ExtensionService#_doActivateExtension icrawl.discord-vscode {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:00:25.162] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/icrawl.discord-vscode-3.2.1/dist/extension
+[2018-12-10 15:00:25.219] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:00:25.219] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/pkief.material-icon-theme-3.6.1/out/src/extension
+[2018-12-10 15:00:25.254] [exthost] [info] ExtensionService#_doActivateExtension robertohuertasm.vscode-icons {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:00:25.254] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/robertohuertasm.vscode-icons-7.28.0/out/src/
+[2018-12-10 15:00:25.323] [exthost] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:00:25.323] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/vscodevim.vim-0.16.13/out/extension
+[2018-12-10 15:00:25.684] [exthost] [info] eager extensions activated
+[2018-12-10 15:02:13.183] [exthost] [info] extension host started
+[2018-12-10 15:02:13.217] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:02:13.217] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/debug-auto-launch/dist/extension
+[2018-12-10 15:02:13.228] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:02:13.228] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/emmet/dist/extension
+[2018-12-10 15:02:13.256] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:02:13.256] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/git/dist/main
+[2018-12-10 15:02:13.383] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:02:13.383] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/merge-conflict/dist/extension
+[2018-12-10 15:02:13.389] [exthost] [info] ExtensionService#_doActivateExtension icrawl.discord-vscode {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:02:13.389] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/icrawl.discord-vscode-3.2.1/dist/extension
+[2018-12-10 15:02:13.442] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:02:13.442] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/pkief.material-icon-theme-3.6.1/out/src/extension
+[2018-12-10 15:02:13.476] [exthost] [info] ExtensionService#_doActivateExtension robertohuertasm.vscode-icons {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:02:13.476] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/robertohuertasm.vscode-icons-7.28.0/out/src/
+[2018-12-10 15:02:13.540] [exthost] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"activationEvent":"*"}
+[2018-12-10 15:02:13.541] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/vscodevim.vim-0.16.13/out/extension
+[2018-12-10 15:02:13.920] [exthost] [info] ExtensionService#_doActivateExtension rust-lang.rust {"startup":true,"activationEvent":"workspaceContains:Cargo.toml"}
+[2018-12-10 15:02:13.921] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/rust-lang.rust-0.5.3/out/src/extension
+[2018-12-10 15:02:14.885] [exthost] [info] eager extensions activated
+[2018-12-10 15:02:21.054] [exthost] [info] ExtensionService#_doActivateExtension bungcip.better-toml {"startup":false,"activationEvent":"onLanguage:toml"}
+[2018-12-10 15:02:21.054] [exthost] [info] ExtensionService#loadCommonJSModule /home/omar/.vscode-oss/extensions/bungcip.better-toml-0.3.2/out/src/extension
+[2018-12-10 15:02:52.096] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2018-12-10 15:02:52.097] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/configuration-editing/dist/extension
+[2018-12-10 15:02:52.264] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2018-12-10 15:02:52.264] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2018-12-10 15:02:52.379] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2018-12-10 15:02:52.379] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/typescript-language-features/dist/extension

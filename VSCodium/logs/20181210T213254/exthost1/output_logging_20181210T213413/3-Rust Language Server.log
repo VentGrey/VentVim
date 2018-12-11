@@ -1,0 +1,6 @@
+error: expected expression, found `<eof>`
+ --> <racer-file>:1:1
+  |
+1 | in
+  | ^^ expected expression
+

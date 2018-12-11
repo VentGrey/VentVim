@@ -1,0 +1,3 @@
+[Error - 17:47:10] Request textDocument/formatting failed.
+  Message: Reformat failed to complete successfully
+  Code: -32603 
