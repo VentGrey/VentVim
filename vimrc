@@ -83,7 +83,7 @@ Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 "YouCompleteMe
 Plug 'Valloric/YouCompleteMe'
-
+let g:loaded_youcompleteme = 1
 " Vim proc
 Plug 'Shougo/vimproc.vim'
 
