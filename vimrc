@@ -30,6 +30,18 @@ Plug 'KabbAmine/vCoolor.vim'
 let g:ale_completion_enabled = 1
 let g:ale_sign_error = "✗"
 let g:ale_sign_warning = "⚠"
+let g:ale_fix_on_save = 1
+let g:ale_list_window_size = 2
+    " C options for A.L.E
+let g:ale_c_parse_makefile = 1
+
+
+"TODO highlight
+Plug 'Dimercel/todo-vim'
+nmap <F5> :TODOToggle<CR>
+
+" Visualmarks
+Plug 'PFZheng/Visual-Mark'
 
 " ------RUST-----
 
@@ -61,8 +73,13 @@ let g:ale_linters = {
             \ }
 let g:ale_rust_rls_executable = '/home/omar/.cargo/bin/rls'
 let g:ale_rust_rls_toolchain = 'nightly'
+let g:ale_cargo_use_clippy = 1
 
 " -----END OF RUST----------
+
+" Remarcar las palabras clave TODO, FIXME y otras predefinidas.
+Plug 'sakshamgupta05/vim-todo-highlight'
+
 
 " Paréntesis bonitos
 Plug 'luochen1990/rainbow'
