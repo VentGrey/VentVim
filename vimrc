@@ -38,10 +38,10 @@ let g:ale_c_parse_makefile = 1
 
 "TODO highlight
 Plug 'Dimercel/todo-vim'
-nmap <F5> :TODOToggle<CR>
+nmap <F4> :TODOToggle<CR>
 
 " Visualmarks
-Plug 'PFZheng/Visual-Mark'
+Plug 'MattesGroeger/vim-bookmarks'
 
 " ------RUST-----
 
