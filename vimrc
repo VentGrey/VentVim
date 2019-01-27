@@ -1,29 +1,29 @@
 set nocompatible	"Be Improved
 
 call plug#begin(expand('~/.vim/plugged'))
-"" Paquetes todos pendejos de plug
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/CSApprox'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'Raimondi/delimitMate'
-Plug 'majutsushi/tagbar'
-Plug 'Yggdroot/indentLine'
-Plug 'sheerun/vim-polyglot'
-Plug 'ryanoasis/vim-devicons'
-Plug 'Shougo/vimproc.vim', {'do': 'make'}
+"" Paquetes todos mecos de plug
+Plug 'scrooloose/nerdtree' " Para tener un árbol de directorios
+Plug 'tpope/vim-fugitive' " Un status de Git para saber que hice
+Plug 'vim-airline/vim-airline' " Una barrita de abajo con colores fresas
+Plug 'vim-airline/vim-airline-themes' " Colores fresas para la barrita de abajo
+Plug 'airblade/vim-gitgutter' " Cosas pa' git
+Plug 'vim-scripts/CSApprox' " Al chile no se que hace esto pero aquí lo dejo
+Plug 'bronson/vim-trailing-whitespace' " Para quitar espacios de más
+Plug 'Raimondi/delimitMate' " Tampoco se que hace pero aquí lo dejo
+Plug 'majutsushi/tagbar' " Para ver las funciones prronas que haga
+Plug 'Yggdroot/indentLine' " Para que se vean puntitos al picarle a tab
+Plug 'sheerun/vim-polyglot' " Chingos de lenguajes
+Plug 'ryanoasis/vim-devicons' " Iconitos fresas
+Plug 'Shougo/vimproc.vim', {'do': 'make'} " Tampoco se que hace
 
 " Linters
-Plug 'w0rp/ale'
+Plug 'w0rp/ale' " Linternas sexys que usan LSP
 
 "Plugins para C/C++
-Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight' " Para que C & C++ se vean bien preciosos
 
 "Selector de colores
-Plug 'KabbAmine/vCoolor.vim'
+Plug 'KabbAmine/vCoolor.vim' " Selector de colores en zenity
 
 "Vim A.L.E
     "Enable A.L.E
@@ -38,7 +38,7 @@ let g:ale_c_parse_makefile = 1
 
 "TODO highlight
 Plug 'Dimercel/todo-vim'
-nmap <F4> :TODOToggle<CR>
+nmap <F5> :TODOToggle<CR>
 
 " Visualmarks
 Plug 'MattesGroeger/vim-bookmarks'
@@ -48,6 +48,21 @@ highlight BookmarkSign ctermbg=NONE ctermfg=160
 highlight BookmarkLine ctermbg=194 ctermfg=NONE
 let g:bookmark_sign = '♥'
 let g:bookmark_highlight_lines = 1
+
+" Ejecutar comandos de manera asíncrona en la terminal de Vim
+Plug 'skywind3000/asyncrun.vim'
+
+" Pantalla de inicio para Vim
+Plug 'mhinz/vim-startify'
+" Título Personalizado
+let g:startify_custom_header = [
+            \ ' ____   ____             __        .__         ',
+            \ ' \   \ /   /____   _____/  |____  _|__| _____  ',
+            \ '  \   Y   _/ __ \ /    \   __\  \/ |  |/     \  ',
+            \ '   \     /\  ___/|   |  |  |  \   /|  |  Y Y  \ ',
+            \ '    \___/  \___  |___|  |__|   \_/ |__|__|_|  / ',
+            \ '               \/     \/                    \/<  ',
+            \]
 
 
 " ------RUST-----
@@ -126,8 +141,8 @@ Plug 'liuchengxu/space-vim-dark'
 Plug 'srcery-colors/srcery-vim'
 ""Lenguajes culeros
 
-" c
-Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
+" Essential Languages
+Plug 'WolfgangMehner/vim-plugins'
 Plug 'ludwig/split-manpage.vim'
 
 
