@@ -64,6 +64,9 @@ let g:startify_custom_header = [
             \ '               \/     \/                    \/<  ',
             \]
 
+" Resaltado de sintaxis en NERDTree
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 
 " ------RUST-----
 
