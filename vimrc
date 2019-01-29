@@ -7,14 +7,12 @@ Plug 'tpope/vim-fugitive' " Un status de Git para saber que hice
 Plug 'vim-airline/vim-airline' " Una barrita de abajo con colores fresas
 Plug 'vim-airline/vim-airline-themes' " Colores fresas para la barrita de abajo
 Plug 'airblade/vim-gitgutter' " Cosas pa' git
-Plug 'vim-scripts/CSApprox' " Al chile no se que hace esto pero aquí lo dejo
 Plug 'bronson/vim-trailing-whitespace' " Para quitar espacios de más
 Plug 'Raimondi/delimitMate' " Tampoco se que hace pero aquí lo dejo
 Plug 'majutsushi/tagbar' " Para ver las funciones prronas que haga
 Plug 'Yggdroot/indentLine' " Para que se vean puntitos al picarle a tab
 Plug 'sheerun/vim-polyglot' " Chingos de lenguajes
 Plug 'ryanoasis/vim-devicons' " Iconitos fresas
-Plug 'Shougo/vimproc.vim', {'do': 'make'} " Tampoco se que hace
 
 " Linters
 Plug 'w0rp/ale' " Linternas sexys que usan LSP
@@ -27,7 +25,7 @@ Plug 'KabbAmine/vCoolor.vim' " Selector de colores en zenity
 
 "Vim A.L.E
     "Enable A.L.E
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_sign_error = "✗"
 let g:ale_sign_warning = "⚠"
 let g:ale_fix_on_save = 1
@@ -123,12 +121,16 @@ endfunction
 
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
-"YouCompleteMe
-Plug 'Valloric/YouCompleteMe'
-let g:loaded_youcompleteme = 1
-" Vim proc
-Plug 'Shougo/vimproc.vim'
-
+"Deoplete
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+" Deoplete options
+let g:deoplete#enable_at_startup = 1
 
 if v:version >= 704
   "" Snippets
@@ -148,12 +150,10 @@ Plug 'srcery-colors/srcery-vim'
 Plug 'WolfgangMehner/vim-plugins'
 Plug 'ludwig/split-manpage.vim'
 
-
 " html
 "" HTML Bundle
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gorodinskiy/vim-coloresque'
-Plug 'tpope/vim-haml'
 
 " javascript
 "" Javascript Bundle
@@ -284,7 +284,7 @@ let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 20
+let g:NERDTreeWinSize = 40
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
