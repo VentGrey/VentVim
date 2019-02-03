@@ -75,6 +75,18 @@ let RUST_SRC_PATH="~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rus
 " Rust.vim
 Plug 'rust-lang/rust.vim'
 
+" Vim Racer
+Plug 'racer-rust/vim-racer'
+" vim-racer options
+set hidden
+let g:racer_cmd = "/home/omar/.cargo/bin/racer"
+
+" Deoplete Rust
+Plug 'sebastianmarkow/deoplete-rust'
+
+" Sources for deoplete Rust
+let g:deoplete#sources#rust#racer_binary='/home/omar/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/home/omar/.cargo/registry/src'
 " rust
 
 autocmd FileType *.rs setlocal tabstop=4 expandtab shiftwidth=4 smarttab
@@ -142,7 +154,7 @@ Plug 'honza/vim-snippets'
 ""Colores para que se vea bien chingón vim
 Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
-Plug 'liuchengxu/space-vim-dark'
+Plug 'liuchengxu/space-vim-theme'
 Plug 'srcery-colors/srcery-vim'
 ""Lenguajes culeros
 
@@ -207,7 +219,6 @@ set fileformats=unix,dos,mac
 
 "" cosas pa doblar el código y no ver todo
 set foldmethod=indent
-set nofoldenable
 "***************************************************
 "Opciones visuales para que vim no se vea culero
 "***************************************************
@@ -417,7 +428,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 "*****************************************************************************
-"" Configuraciones especiales para lenguajes culeros
+"" Configuraciones especiales para lenguajes más feos que un refri por detrás
 "*****************************************************************************
 
 " c
