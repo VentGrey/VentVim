@@ -218,7 +218,15 @@ set noswapfile
 set fileformats=unix,dos,mac
 
 "" cosas pa doblar el código y no ver todo
-set foldmethod=indent
+augroup vimrc
+  au BufReadPre * setlocal foldmethod=indent
+  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+augroup END
+
+" Comandos perrones para el doblado manual
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
 "***************************************************
 "Opciones visuales para que vim no se vea culero
 "***************************************************
