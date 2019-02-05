@@ -141,6 +141,14 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+
+"Deoplete Clang
+Plug 'zchee/deoplete-clang'
+
+"clang-options
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang-6.0.so.1'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/x86_64-linux-gnu/'
+
 " Deoplete options
 let g:deoplete#enable_at_startup = 1
 
