@@ -146,7 +146,7 @@ endif
 Plug 'zchee/deoplete-clang'
 
 "clang-options
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang-6.0.so.1'
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/x86_64-linux-gnu/libclang-7.0.so.1'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/x86_64-linux-gnu/'
 
 " Deoplete options
@@ -161,7 +161,6 @@ Plug 'honza/vim-snippets'
 
 ""Colores para que se vea bien chingón vim
 Plug 'tomasr/molokai'
-Plug 'morhetz/gruvbox'
 Plug 'liuchengxu/space-vim-theme'
 Plug 'srcery-colors/srcery-vim'
 ""Lenguajes culeros
@@ -169,15 +168,6 @@ Plug 'srcery-colors/srcery-vim'
 " Essential Languages
 Plug 'WolfgangMehner/vim-plugins'
 Plug 'ludwig/split-manpage.vim'
-
-" html
-"" HTML Bundle
-Plug 'hail2u/vim-css3-syntax'
-Plug 'gorodinskiy/vim-coloresque'
-
-" javascript
-"" Javascript Bundle
-Plug 'jelera/vim-javascript-syntax'
 
 call plug#end()
 
@@ -244,15 +234,12 @@ set numberwidth=1
 set mouse=a
 set mousemodel=popup
 set t_Co=256
-let g:CSApprox_loaded = 1
 set colorcolumn=80
 
 " El tema que wausar c:
 set background=dark
 colorscheme srcery
 hi Comment cterm=italic
-let g:space_vim_dark_background = 233
-let g:rehash256 = 1
 " indicadores de indent por si tengo que programar en la caca de python
 let g:indentLine_enabled = 1
 let g:indentLine_char = '·'
@@ -270,10 +257,6 @@ set titleold="Terminal"
 set titlestring=%F
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
-
-"" Mapeado de búsqueda (no preguntar que hace)
-nnoremap n nzzzv
-nnoremap N Nzzzv
 
 if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
@@ -404,9 +387,6 @@ if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
 
-" Intento de arreglar los cagaderos en gvim
-set noeb vb t_vb=
-
 "" Copy/Paste/Cut porque todos quieren clipboard aquí
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
@@ -415,33 +395,6 @@ endif
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
-
-
-"" navegar en el buffer
-noremap <leader>z :bp<CR>
-noremap <leader>q :bp<CR>
-noremap <leader>x :bn<CR>
-noremap <leader>w :bn<CR>
-
-"" cerrar buffer alv
-noremap <leader>c :bd<CR>
-
-"" Clean search (highlight)
-nnoremap <silent> <leader><space> :noh<cr>
-
-"" Cambiar de ventanas
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
-
-"" Cositas para las flechitas
-vmap < <gv
-vmap > >gv
-
-"" Unos bloquesotes bien sexys
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 
 "*****************************************************************************
 "" Configuraciones especiales para lenguajes más feos que un refri por detrás
@@ -453,21 +406,6 @@ autocmd FileType cpp setlocal tabstop=8 shiftwidth=8 expandtab
 
 " Kiasko Python
 autocmd FileType py setlocal tabstop=4 shiftwidth=4 expandtab
-
-" html
-" for html files, 2 spaces
-autocmd Filetype html setlocal ts=4 sw=4 expandtab
-
-
-" javascript
-let g:javascript_enable_domhtmlcss = 1
-
-" vim-javascript
-augroup vimrc-javascript
-  autocmd!
-  autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab softtabstop=4
-augroup END
-
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
