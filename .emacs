@@ -21,10 +21,12 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
  '(custom-enabled-themes (quote (srcery)))
  '(custom-safe-themes
    (quote
     ("144f05e2dfa7a7b50cad0c3519498ac064cc9da1f194b8ea27d0fb20129d8d7a" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+ '(display-line-numbers t)
  '(fill-column 80)
  '(hl-todo-keyword-faces
    (quote
@@ -44,11 +46,18 @@ There are two things you can do about this warning:
      ("XXX" . "#dc752f")
      ("XXXX" . "#dc752f")
      ("???" . "#dc752f"))))
+ '(inhibit-default-init t)
+ '(inhibit-startup-buffer-menu nil)
+ '(inhibit-startup-screen t)
+ '(initial-scratch-message nil)
  '(neo-theme (quote icons))
  '(package-selected-packages
    (quote
-    (fill-column-indicator srcery-theme all-the-icons-dired counsel all-the-icons-ivy all-the-icons neotree company-lsp lsp-ui lsp-mode lsp-rustmode flycheck-inline flycheck-rust company racer flycheck rust-mode evil spaceline spacemacs-theme)))
+    (git-gutter spaceline-all-the-icons ivy-explorer autopair rainbow-delimiters imenu-list fill-column-indicator srcery-theme all-the-icons-dired counsel all-the-icons-ivy all-the-icons neotree company-lsp lsp-ui lsp-mode lsp-rustmode flycheck-inline flycheck-rust company racer flycheck rust-mode evil spaceline spacemacs-theme)))
  '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#292b2e")))
+ '(scroll-bar-mode nil)
+ '(show-paren-mode t)
+ '(size-indication-mode t)
  '(spaceline-buffer-id-max-length 40))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -56,61 +65,54 @@ There are two things you can do about this warning:
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
+(menu-bar-mode -1)
+(tool-bar-mode -1)
 (require 'spaceline-config)
 (spaceline-spacemacs-theme)
 
+;; Quitar los archivos castrosos
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
+
+;; Vim For Emacs
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
 
+;; Desmadre de Rust
+(setq racer-cmd "~/.cargo/bin/racer")
+(setq racer-rust-src-path "~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src")
+
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
-
 (add-hook 'racer-mode-hook #'company-mode)
 
 (require 'rust-mode)
 (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
 (setq company-tooltip-align-annotations t)
 
-(add-to-list 'load-path "/some/path/neotree")
+;; Neotree para que poder navegar entre archivos
 (require 'neotree)
 (global-set-key [f3] 'neotree-toggle)
 
+;; Motor de completado (Ligero)
 (ivy-mode 1)
 
+;; Iconos fresas
 (require 'all-the-icons)
 
-;; Desmadre de Fira Code
-(when (window-system)
-  (set-frame-font "Fira Code"))
-(let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
-               (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
-               (36 . ".\\(?:>\\)")
-               (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
-               (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
-               (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
-               (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
-               (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
-               (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
-               (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
-               (48 . ".\\(?:x[a-zA-Z]\\)")
-               (58 . ".\\(?:::\\|[:=]\\)")
-               (59 . ".\\(?:;;\\|;\\)")
-               (60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
-               (61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
-               (62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
-               (63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
-               (91 . ".\\(?:]\\)")
-               (92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
-               (94 . ".\\(?:=\\)")
-               (119 . ".\\(?:ww\\)")
-               (123 . ".\\(?:-\\)")
-               (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
-               (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)")
-               )
-             ))
-  (dolist (char-regexp alist)
-    (set-char-table-range composition-function-table (car char-regexp)
-                          `([,(cdr char-regexp) 0 font-shape-gstring]))))
-;; Fin del desmadre de FiraCode
+;; Desmadres para Company Mode
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+
+
+;; Barra para no pasarse de verga con los 80 caracteres
+(add-hook 'after-change-major-mode-hook 'fci-mode)
+
+;; Completado de paréntesis
+(require 'autopair)
+(autopair-global-mode) ;; enable autopair in all buffers
+
+;; Tagbar perrona
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(global-set-key (kbd "C-'") #'imenu-list-smart-toggle)
